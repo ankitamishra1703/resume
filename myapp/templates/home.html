@@ -1,59 +1,84 @@
-{% include 'base.html' %}
-<div id="'resume">
-    <div id="title"><h1> RESUME </h1></div>
+{% extends 'base.html' %}
 
-<h2> ANKITA MISHRA </h2>
-<h2> Email ID: abcdef2617@gmail.com</h2>
-<h2> Contact: 9365XXXXXX </h2>
-<h2> Address: Bangalore </h2>
+{% block title %}Resume | Ankita Mishra{% endblock %}
 
-<div id="sub"><h3> CAREER ABJECTIVE </h3></div>
- <p>
-        Motivated MCA graduate seeking an opportunity in the IT industry where I can effectively utilize my programming
-        and technical skills to solve real-world problems, gain hands-on experience, and continuously enhance my
-        knowledge while contributing positively to the growth and success of the organization.
-    </p>
+{% block content %}
+<div class="resume">
 
+<h1>Ankita Mishra</h1>
+<h3>Python & Django Developer</h3>
 
-<div id="sub"><h3>EDUCATION</h3></div>
+<p class="contact">
+<b>Email:</b>
+<a href="mailto:ankitamishra2617mail@gmail.com">
+ankitamishra2617mail@gmail.com
+</a>
+&nbsp;|&nbsp;
 
-<table id="edu">
-    <tr>
-        <td><ul><li>MCA – Presidency College(9.1 CGPA)</li></ul></td>
-        <td>2024</td>
-    </tr>
-    <tr>
-        <td><ul><li>BCA – DHSK College(8.4)</li></ul></td>
-        <td>2022</td>
-    </tr>
-</table>
+<b>GitHub:</b>
+<a href="https://github.com/ankitamishra1703" target="_blank">
+github.com/ankitamishra1703
+</a>
+<br>
 
+<b>LinkedIn:</b>
+<a href="https://www.linkedin.com/in/ankita-mishra-0a5837307/" target="_blank">
+linkedin.com/in/ankita-mishra
+</a>
+</p>
 
-<div id="sub"><h3> PROFESIONAL SKILLS </h3></div>
-<ul>
+<h2>Career Objective</h2>
+<p>
+Motivated MCA graduate with strong knowledge of Python and Django,
+seeking an entry-level software developer role to build scalable
+and real-world web applications.
+</p>
+
+<h2>Skills</h2>
+<ul class="skills-list">
     <li>Python</li>
-    <li>Django Framework</li>
-    <li>Html</li>
-    <li>Css</li>
-    <li>Javascript</li>
-    <li>SQL</li>
-    <li>Git</li>
+    <li>Django</li>
+    <li>HTML, CSS, Bootstrap</li>
+    <li>SQL / SQLite</li>
+    <li>Git & GitHub</li>
 </ul>
 
-<div id="sub"><h3> WORK EXPERIENCE </h3></div>
-<ul><li>Freshers</li></ul>
-
-<div id="sub"><h3> PROJECTS </h3></div>
+<h2>Technology Stack</h2>
 <ul>
-        <li>
-            <b>MediShelf Monitor:</b>
-            Medicine shelf monitoring system to track stock and expiry details,
-            reducing wastage and improving safety in pharmacies and hospitals.
-        </li>
-        <li>
-            <b>Resume Template:</b>
-            Developed a resume template using Django framework,
-            working with views, templates, and DTL concepts.
-        </li>
+    <li><b>Backend:</b> Python, Django</li>
+    <li><b>Frontend:</b> HTML, CSS, Bootstrap</li>
+    <li><b>Database:</b> SQLite</li>
+    <li><b>Tools:</b> Git, VS Code</li>
 </ul>
+
+<h2>Projects</h2>
+<p>
+<b>Portfolio Website</b><br>
+• Developed a responsive personal portfolio using Django<br>
+• Implemented reusable templates and dark mode
+</p>
+
+
+<h2>Certifications</h2>
+<ul class="cert-list">
+    <li>Python Programming Certification</li>
+    <li>Django Web Development Certification</li>
+    <li>SQL / Database Fundamentals Certification</li>
+    <li>Git & GitHub Version Control Certification</li>
+    <li>Web Development Basics Certification</li>
+</ul>
+
+<h2>Education</h2>
+<p>
+<b>Master of Computer Applications (MCA)</b> — 2023–2025 <br>
+CGPA: <b>9.07</b> <br><br>
+<b>Bachelor of Computer Applications (BCA)</b> — 2020–2023 <br>
+CGPA: <b>8.41</b>
+</p>
+
+
+
+<a onclick="window.print()" class="resume-btn">Download PDF</a>
+
 </div>
+{% endblock %}
