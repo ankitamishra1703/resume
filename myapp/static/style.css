@@ -1,182 +1,149 @@
-/* RESET */
+/* ======================
+   RESET
+====================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Segoe UI", Arial, sans-serif;
+    font-family: "Times New Roman", Georgia, serif;
 }
 
-/* PAGE */
+/* ======================
+   PAGE
+====================== */
 body {
     background: #ffffff;
-    color: #111827;
+    color: #111;
 }
 
-/* CONTAINER WITH BORDER */
+/* ======================
+   CONTAINER
+====================== */
 .container {
     max-width: 850px;
     margin: 30px auto;
-    padding: 30px;
-    border: 1px solid #d1d5db;
+    padding: 35px 45px;
 }
 
-/* NAME & ROLE */
+/* ======================
+   HEADER
+====================== */
 .resume h1 {
     text-align: center;
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 26px;
+    letter-spacing: 1px;
+    font-weight: bold;
 }
 
 .resume h3 {
     text-align: center;
-    font-size: 17px;
-    color: #2563eb;
-    margin-bottom: 6px;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 4px;
 }
 
-/* CONTACT */
+/* CONTACT LINE */
 .resume .contact {
-    text-align: center;
-    font-size: 13px;
-    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin: 12px 0 18px;
+    border-bottom: 1px solid #000;
+    padding-bottom: 6px;
 }
 
-/* FORCE LINKS CLICKABLE */
 .resume a {
-    color: #2563eb;
-    text-decoration: underline;
-    cursor: pointer;
-    pointer-events: auto;
+    color: #000;
+    text-decoration: none;
 }
 
-/* SECTION HEADINGS */
+/* ======================
+   SECTION HEADERS
+====================== */
 .resume h2 {
-    margin-top: 14px;
-    margin-bottom: 4px;
-    font-size: 16px;
-    font-weight: 600;
-    border-bottom: 1px solid #d1d5db;
-    padding-bottom: 2px;
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin: 22px 0 10px;
+    background: #f2f2f2;
+    padding: 5px 0;
+    font-weight: bold;
 }
 
-/* TEXT */
+/* ======================
+   TEXT
+====================== */
 .resume p,
 .resume li {
-    font-size: 13.5px;
+    font-size: 13px;
     line-height: 1.5;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
 }
 
-/* LISTS */
+/* ======================
+   LISTS
+====================== */
 .resume ul {
-    margin-left: 18px;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 40px;
 }
 
-/* SKILLS & CERTIFICATIONS */
+.resume ul li::before {
+    content: "▪";
+    margin-right: 6px;
+}
+
+/* ======================
+   PROJECT TITLES
+====================== */
+.resume p b {
+    font-weight: bold;
+}
+
+/* ======================
+   CERTIFICATIONS / SKILLS
+====================== */
 .skills-list,
 .cert-list {
-    columns: 2;
-    column-gap: 30px;
+    grid-template-columns: 1fr 1fr;
 }
 
-/* SMALL DOWNLOAD BUTTON */
-/* FIX: Download PDF text invisible */
-/* FINAL FIX: Download PDF button text size */
+/* ======================
+   EDUCATION BLOCK
+====================== */
+.resume .education p {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ======================
+   BUTTON (SCREEN ONLY)
+====================== */
 .resume-btn {
-    display: inline-block !important;
-    margin: 10px auto 0 !important;
-    padding: 3px 10px !important;   /* small padding */
-    font-size: 10.5px !important;   /* 👈 text chhota */
-    font-weight: 500 !important;    /* not bold */
-    line-height: 1.2 !important;
-    letter-spacing: 0.2px !important;
-    background-color: #2563eb !important;
-    color: #ffffff !important;
-    border-radius: 3px !important;
-    text-decoration: none !important;
-    cursor: pointer !important;
-    width: fit-content !important;
+    display: none;
 }
 
-
-/* PRINT / PDF */
+/* ======================
+   PRINT / PDF
+====================== */
 @media print {
-    nav, footer, .resume-btn {
-        display: none;
+
+    @page {
+        size: A4;
+        margin: 18mm;
     }
 
     body {
-        background: white;
-        color: black;
+        font-size: 12px;
     }
 
     .container {
-        margin: 0;
         padding: 0;
-        border: 1px solid #000;
     }
-}
-/* ===== SECTION HIGHLIGHT SYSTEM ===== */
 
-/* Section headings */
-.resume h2 {
-    margin-top: 14px;
-    margin-bottom: 6px;
-    font-size: 16px;
-    font-weight: 700;
-    color: #1f2937;
-    border-bottom: 1px solid #9ca3af;
-    padding-bottom: 2px;
-}
-
-/* Career Objective text */
-.resume h2 + p {
-    color: #374151;
-    font-weight: 500;
-}
-
-/* Skills & Technology lists */
-.resume ul li {
-    color: #111827;
-    font-weight: 500;
-}
-
-/* Highlight main technologies */
-.highlight {
-    font-weight: 700;
-    color: #1d4ed8;
-}
-
-/* Projects title */
-.resume p b {
-    color: #111827;
-}
-
-/* Projects description */
-.resume p {
-    color: #374151;
-}
-
-/* Education lines */
-.resume h2 + p b {
-    color: #111827;
-}
-.skills-list li {
-    list-style-type: square;
-}
-@media print {
     nav, footer, .resume-btn {
         display: none !important;
-    }
-
-    body {
-        background: white;
-        color: black;
-    }
-
-    .container {
-        margin: 0;              /* page ke saath flush */
-        padding: 40px;          /* safe inner spacing */
-        border: none;           /* 👈 print me border hata do */
     }
 }
